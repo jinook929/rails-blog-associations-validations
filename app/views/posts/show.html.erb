@@ -5,6 +5,13 @@
   <%= @post.name %>
 </p>
 
+<p><%= @post.content %></p>
+
+<ul>
+  <% @post.tags.each do |tag| %>
+    <p><em><%= tag.name %></em></p>    
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
